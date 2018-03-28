@@ -9,9 +9,10 @@ export default (lazy) => {
             }
         },
         render (h) {
-            if (this.show === false) {
-                return h(this.tag)
-            }
+            //默认不渲染
+            // if (this.show === false) {
+            //     return h(this.tag)
+            // }
             return h(this.tag, null, this.$slots.default)
         },
         data () {

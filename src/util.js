@@ -127,6 +127,7 @@ function supportWebp () {
 }
 
 function throttle (action, delay) {
+    
     let timeout = null
     let lastRun = 0
     return function () {

@@ -1,6 +1,8 @@
 import Lazy from './lazy'
 import LazyComponent from './lazy-component'
-import { assign } from './util'
+import {
+    assign
+} from './util'
 
 export default {
     /**
@@ -8,7 +10,7 @@ export default {
      * @param  {Vue} Vue
      * @param  {object} options  lazyload options
      */
-    install (Vue, options = {}) {
+    install(Vue, options = {}) {
         const LazyClass = Lazy(Vue)
         const lazy = new LazyClass(options)
 
@@ -25,12 +27,12 @@ export default {
                 bind: lazy.add.bind(lazy),
                 update: lazy.update.bind(lazy),
                 componentUpdated: lazy.lazyLoadHandler.bind(lazy),
-                unbind : lazy.remove.bind(lazy)
+                unbind: lazy.remove.bind(lazy)
             })
         } else {
             Vue.directive('lazy', {
                 bind: lazy.lazyLoadHandler.bind(lazy),
-                update (newValue, oldValue) {
+                update(newValue, oldValue) {
                     assign(this.vm.$refs, this.vm.$els)
                     lazy.add(this.el, {
                         modifiers: this.modifiers || {},
@@ -41,7 +43,7 @@ export default {
                         context: this.vm
                     })
                 },
-                unbind () {
+                unbind() {
                     lazy.remove(this.el)
                 }
             })
