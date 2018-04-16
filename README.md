@@ -7,13 +7,13 @@
 
 > 添加listenerFactory.js用来生成对应监听类
 
-## "<img v-lazy="imgsrc"></img>"
+```html "<img v-lazy="imgsrc"></img>" ```
 
 > 用于图片延迟加载  
 
 > imgsrc="http://xxx.com/img.jpg"
 
-## "<div v-lazy:scroll="scroll">...</div>"
+```html <div v-lazy:scroll="scroll">...</div>```
 
 > 用于区块加载，当区块出现在屏幕时触发事件  
 
@@ -26,7 +26,7 @@ scroll() {
 }
 ```
 
-## "<div v-lazy:custom="custom">...</div>"
+```html "<div v-lazy:custom="custom">...</div>" ```
 > 用于用户自定义触发事件   
 
 
