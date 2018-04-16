@@ -7,6 +7,8 @@
 
 > 添加listenerFactory.js用来生成对应监听类
 
+## 文档
+
 ```html "<img v-lazy="imgsrc"></img>" ```
 
 > 用于图片延迟加载  
