@@ -21,7 +21,6 @@ scroll() {
     console.log('滚动执行了')
     return false
 }
-```
 
 ## <div v-lazy:custom="custom">...</div>
 > 用于用户自定义触发事件   
@@ -39,4 +38,3 @@ let custom={
         return true // 返回true 表示触发后不从执行列队删除，所以可以重复触发 
     }
 }
-```
