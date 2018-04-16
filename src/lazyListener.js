@@ -45,7 +45,6 @@ export default class LazyListener extends Listener {
 
         this.$parent = $parent
         this.elRenderer = elRenderer
-        console.log(this.src)
         this.render('loading', false)
     }
 

@@ -154,7 +154,7 @@ export default function (Vue) {
                 let listenerType = binding.arg || 'lazy'
 
                 newListener = new listenerFactory(listenerType, {
-                    bindType: listenerType,
+                    bindType: binding.arg,
                     $parent,
                     el,
                     loading,
